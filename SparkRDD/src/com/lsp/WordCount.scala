@@ -29,7 +29,7 @@ object WordCount {
     // 统计每个单词的总次数
     //对相同的key，进行value累加（包括local和reduce级别同时reduce）
     // 单词为key 次数为value
-    val wordCount = pairs.reduceByKey(_ + _)
+    val wordCount = pairs.reduceByKey{_ + _}
 
     //val wordCountOrdered=wordCount.map(pair => (pair._2,pair._1)).sortByKey(false).map(pair=>(pair._2,pair._1))
     val wordCountOrdered=wordCount.sortByKey()

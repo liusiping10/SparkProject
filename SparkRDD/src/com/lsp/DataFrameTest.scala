@@ -18,7 +18,7 @@ object DataFrameTest {
 
     //DataFrame df=sqlContext.read.json("")
 
-   // lines.repartition(2) // 重新分区
+    lines.repartition(2) // 重新分区
 
 
     sc.stop
