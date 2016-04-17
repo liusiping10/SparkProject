@@ -15,7 +15,7 @@ object WordCount {
     val sc = new SparkContext(conf)
     //D:\spark-1.5.2-bin-hadoop2.6\README.md
     // 得到RDD[String]  基于行作处理
-    val lines = sc.textFile("d://data.txt", 1) ///minPartitions
+    val lines = sc.textFile("D:\\spark-1.6.1-bin-hadoop2.6\\testData\\data.txt", 1) ///minPartitions
 
     println(lines.count)
     //   HadoopRDD  --（map）->MapPartitionsRDD
